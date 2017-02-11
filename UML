@@ -1,0 +1,31 @@
+@startuml
+class Batiments {
+String : nom
+int : taille 
+HashMap<Besoins, Integer> : entrée
+HashMap<Besoins, Integer> : sortie
+Zone : zone
+}
+
+class Commerce {
+int : nbEmployee
+int rayon
+}
+
+class Habitation {
+int : nbHabitant
+}
+
+class Zone {
+String nom
+}
+
+class Besoins {
+String nom
+}
+
+Batiments  <|.. Commerce
+Batiments  <|.. Habitation
+Batiments  *-- Zone
+Batiments  -- Besoins
+@enduml
